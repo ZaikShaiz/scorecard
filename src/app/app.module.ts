@@ -8,13 +8,15 @@ import { ScorcardComponent } from './criket-module/scorcard/scorcard.component';
 import { MatchinfoComponent } from './criket-module/matchinfo/matchinfo.component';
 import { PlayerdetailsComponent } from './criket-module/playerdetails/playerdetails.component';
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
+import { LayoutComponent } from './layout/layout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ScorcardComponent,
     MatchinfoComponent,
-    PlayerdetailsComponent
+    PlayerdetailsComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
