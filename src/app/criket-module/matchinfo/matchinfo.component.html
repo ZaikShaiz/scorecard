@@ -1,238 +1,236 @@
 <div class="slides-container " (touchstart)="onTouchStart($event)" (touchend)="onTouchEnd($event)">
     <div class="slides-inner" [style.transform]="'translateX(' + offset + '%)'">
-      <!-- Slide 1 -->
-       <!-- <div class="" *ngFor="let slide of slides; let i = index" [class.active]="i === currentIndex"> -->
-
-           <div class="Mainclass" [class.active]="currentIndex === 1">
-             <div class="firstBlock">
-                 <span class="Cardheading">1st T20I | India tour of Ireland, 2023 </span>
-                 <div class="Flagdiv">
-                     <div class="country">
-                         <img class="FlagImg" src="../../../assets/flag2.png" alt="">
-                         <div class="Score">
-                             <span class="CountryName">IRE</span>
-                             <span class="runs">142-5<span class="over">18.2</span></span>
-                         </div>
-                     </div>
-                     <div class="showDesktop borderClass">
-                         <div class="borders"></div>
-                         <span class="vs">vs</span>
-                         <div class="borders"></div>
-                     </div>
-                     <div class="country">
-                         <img class="FlagImg" src="../../../assets/indiaFlag.png" alt="">
-                         <div class="Score">
-                             <span class="CountryName">IND</span>
-                             <!-- <span class="runs"> 142-5<span class="over">18.2</span> -->
-                             <span class="Target"> 200,<span class="over">yet to bet</span>
-                             </span>
-                         </div>
-                     </div>
-                 </div>
-                 <span class="TossStatus">Ind won the toss and choose to bat</span>
-             </div>
-             <div class="" style="position: relative;">
-                 <div class="OverDiv Scrollhidden " (scroll)="onScroll($event)" #scrollContainer>
-                     <div class="LeftClick showInMobile" *ngIf="canScrollLeft()" (click)="scrollLeft()">
-                         <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                             <path id="Vector"
-                                 d="M6.41767 12C6.22113 11.9331 6.08087 11.7917 5.93848 11.6479C4.23164 9.92434 2.52298 8.20295 0.81402 6.48156C0.67224 6.33863 0.597395 6.16317 0.605305 5.96779C0.612911 5.7816 0.702969 5.62179 0.836838 5.48713C2.48556 3.82679 4.13307 2.16521 5.78179 0.504562C5.91505 0.370212 6.0474 0.232796 6.19435 0.114397C6.42315 -0.0699496 6.82384 -0.021179 7.01978 0.186786C7.1427 0.317148 7.26683 0.446896 7.39857 0.567749C7.68578 0.830926 7.66144 1.25913 7.39674 1.52598C6.2336 2.6974 5.07137 3.86973 3.90853 5.04145C3.59607 5.35616 3.283 5.67025 2.96414 5.99048C2.99061 6.01932 3.01252 6.04478 3.03625 6.06839C4.47839 7.52231 5.92022 8.97684 7.36358 10.4295C7.50049 10.5672 7.59177 10.7292 7.60089 10.9209C7.60911 11.0902 7.55678 11.2537 7.4366 11.381C7.29239 11.5338 7.14939 11.6896 6.99027 11.8261C6.90051 11.9031 6.78003 11.9433 6.67324 12H6.41737H6.41767Z"
-                                 fill="black" fill-opacity="0.4" />
-                         </svg>
-                     </div>
-                     <div class="BallsStatus">
-                         <span class="OverCount">Over:17</span>
-                         <span class="Gol balls">1</span>
-                         <span class="wicket balls">W</span>
-                         <span class="Gol balls">3</span>
-                         <span class="Gol balls">4</span>
-                         <span class="Gol balls">5</span>
-                         <span class="wicket balls">W</span>
-                     </div>
-                     <div class="BallsStatus">
-                         <span class="OverCount">Over:17</span>
-                         <span class="Gol balls">1</span>
-                         <span class="wicket balls">W</span>
-                         <span class="Gol balls">3</span>
-                         <span class="wicket balls">W</span>
-                         <span class="Gol balls">5</span>
-                         <span class="wicket balls">W</span>
-                     </div>
-                     <div class="BallsStatus">
-                         <span class="OverCount">Over:17</span>
-                         <span class="Gol balls">1</span>
-                         <span class="wicket balls">W</span>
-                         <span class="Gol balls">3</span>
-                         <span class="Gol balls">4</span>
-                         <span class="Gol balls">5</span>
-                         <span class="wicket balls">W</span>
-                     </div>
-                     <div class="BallsStatus">
-                         <span class="OverCount">Over:17</span>
-                         <span class="Gol balls">1</span>
-                         <span class="wicket balls">W</span>
-                         <span class="Gol balls">3</span>
-                         <span class="Gol balls">4</span>
-                         <span class="Gol balls">5</span>
-                         <span class="wicket balls">W</span>
-                     </div>
-                     <div class="RightClick showInMobile" *ngIf="canScrollRight()" (click)="scrollRight()">
-                         <svg style="transform: rotate(-180deg);" width="8" height="12" viewBox="0 0 8 12" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                             <path id="Vector"
-                                 d="M6.41767 12C6.22113 11.9331 6.08087 11.7917 5.93848 11.6479C4.23164 9.92434 2.52298 8.20295 0.81402 6.48156C0.67224 6.33863 0.597395 6.16317 0.605305 5.96779C0.612911 5.7816 0.702969 5.62179 0.836838 5.48713C2.48556 3.82679 4.13307 2.16521 5.78179 0.504562C5.91505 0.370212 6.0474 0.232796 6.19435 0.114397C6.42315 -0.0699496 6.82384 -0.021179 7.01978 0.186786C7.1427 0.317148 7.26683 0.446896 7.39857 0.567749C7.68578 0.830926 7.66144 1.25913 7.39674 1.52598C6.2336 2.6974 5.07137 3.86973 3.90853 5.04145C3.59607 5.35616 3.283 5.67025 2.96414 5.99048C2.99061 6.01932 3.01252 6.04478 3.03625 6.06839C4.47839 7.52231 5.92022 8.97684 7.36358 10.4295C7.50049 10.5672 7.59177 10.7292 7.60089 10.9209C7.60911 11.0902 7.55678 11.2537 7.4366 11.381C7.29239 11.5338 7.14939 11.6896 6.99027 11.8261C6.90051 11.9031 6.78003 11.9433 6.67324 12H6.41737H6.41767Z"
-                                 fill="black" fill-opacity="0.4" />
-                         </svg>
-                     </div>
-                 </div>
-             </div>
-             <div class="secondBlock">
-                 <div class="ScoreDiv">
-                     <div class="PlayerName">
-                         <span class="Svgalign">
-                             <img class="" src="../../../assets/svgbat.png" alt="">
-                             <span class="player1Score">Shivam Dube : 56(43)*</span>
-                         </span>
-                         <span class="Svgalign">
-                             <img class="" src="../../../assets/svgbat.png" alt="">
-                             <span class="player1Score">Shivam Dube : 56(43)*</span>
-                         </span>
-                     </div>
-                     <div class="PlayerName">
-                         <span class="Svgalign">
-                             <img class="" src="../../../assets/svgball.png" alt="">
-                             <span class="player2Score">Shivam Dube : 56(43)*</span> </span>
-                         <span class="Svgalign">
-                             <img class="" src="../../../assets/svgball.png" alt="">
-                             <span class="player2Score">Shivam Dube : 56(43)*</span> </span>
-                     </div>
-                 </div>
-             </div>
-         </div>
-          <!-- slide 2 -->
-         <div class="Mainclass" [class.active]="currentIndex === 2">
-             <div class="ImgSpan">
-                 <span class="Cardheading teamName">India </span>
-                 <img class="teamImg" src="../../../assets/indiaFlag.png" alt="">
-             </div>
-             <div class="secondBlock">
-                 <div class="ScoreDiv">
-                     <div class="PlayerName">
-                         <span class="Svgalign playerClass">
-                             <img class="" src="../../../assets/svgbat.png" alt="">
-                             <span class="player1Score">Shivam Dube : 56(43)*</span>
-                         </span>
-                         <span class="Svgalign playerClass">
-                             <img class="" src="../../../assets/svgbat.png" alt="">
-                             <span class="player1Score">Shivam Dube : 56(43)*</span>
-                         </span>
-                         <span class="Svgalign playerClass">
-                             <img class="" src="../../../assets/svgbat.png" alt="">
-                             <span class="player1Score">Shivam Dube : 56(43)*</span>
-                         </span>
-                         <span class="Svgalign playerClass">
-                             <img class="" src="../../../assets/svgbat.png" alt="">
-                             <span class="player1Score">Shivam Dube : 56(43)*</span>
-                         </span>
-                         <span class="Svgalign playerClass">
-                             <img class="" src="../../../assets/svgbat.png" alt="">
-                             <span class="player1Score">Shivam Dube : 56(43)*</span>
-                         </span>
-                         <span class="Svgalign playerClass">
-                             <img class="" src="../../../assets/svgbat.png" alt="">
-                             <span class="player1Score">Shivam Dube : 56(43)*</span>
-                         </span>
-                     </div>
-                     <div class="PlayerName">
-                         <span class="Svgalign playerClass">
-                             <img class="" src="../../../assets/svgball.png" alt="">
-                             <span class="player2Score">Shivam Dube : 56(43)*</span> </span>
-                         <span class="Svgalign playerClass">
-                             <img class="" src="../../../assets/svgball.png" alt="">
-                             <span class="player2Score">Shivam Dube : 56(43)*</span> </span>
-                         <span class="Svgalign playerClass">
-                             <img class="" src="../../../assets/svgball.png" alt="">
-                             <span class="player2Score">Shivam Dube : 56(43)*</span> </span>
-                         <span class="Svgalign playerClass">
-                             <img class="" src="../../../assets/svgball.png" alt="">
-                             <span class="player2Score">Shivam Dube : 56(43)*</span> </span>
-                         <span class="Svgalign playerClass">
-                             <img class="" src="../../../assets/svgball.png" alt="">
-                             <span class="player2Score">Shivam Dube : 56(43)*</span> </span>
-                     </div>
-                 </div>
-             </div>
-         </div>
-          <!-- slide 3 -->
-         <div class="Mainclass" [class.active]="currentIndex === 3">
-             <div class="ImgSpan">
-                 <span class="Cardheading teamName">Ireland </span>
-                 <img class="teamImg" src="../../../assets/flag2.png" alt="">
-             </div>
-             <div class="secondBlock">
-                 <div class="ScoreDiv">
-                     <div class="PlayerName">
-                         <span class="Svgalign playerClass">
-                             <img class="" src="../../../assets/svgbat.png" alt="">
-                             <span class="player1Score">Shivam Dube : 56(43)*</span>
-                         </span>
-                         <span class="Svgalign playerClass">
-                             <img class="" src="../../../assets/svgbat.png" alt="">
-                             <span class="player1Score">Shivam Dube : 56(43)*</span>
-                         </span>
-                         <span class="Svgalign playerClass">
-                             <img class="" src="../../../assets/svgbat.png" alt="">
-                             <span class="player1Score">Shivam Dube : 56(43)*</span>
-                         </span>
-                         <span class="Svgalign playerClass">
-                             <img class="" src="../../../assets/svgbat.png" alt="">
-                             <span class="player1Score">Shivam Dube : 56(43)*</span>
-                         </span>
-                         <span class="Svgalign playerClass">
-                             <img class="" src="../../../assets/svgbat.png" alt="">
-                             <span class="player1Score">Shivam Dube : 56(43)*</span>
-                         </span>
-                         <span class="Svgalign playerClass">
-                             <img class="" src="../../../assets/svgbat.png" alt="">
-                             <span class="player1Score">Shivam Dube : 56(43)*</span>
-                         </span>
-                     </div>
-                     <div class="PlayerName">
-                         <span class="Svgalign playerClass">
-                             <img class="" src="../../../assets/svgball.png" alt="">
-                             <span class="player2Score">Shivam Dube : 56(43)*</span> </span>
-                         <span class="Svgalign playerClass">
-                             <img class="" src="../../../assets/svgball.png" alt="">
-                             <span class="player2Score">Shivam Dube : 56(43)*</span> </span>
-                         <span class="Svgalign playerClass">
-                             <img class="" src="../../../assets/svgball.png" alt="">
-                             <span class="player2Score">Shivam Dube : 56(43)*</span> </span>
-                         <span class="Svgalign playerClass">
-                             <img class="" src="../../../assets/svgball.png" alt="">
-                             <span class="player2Score">Shivam Dube : 56(43)*</span> </span>
-                         <span class="Svgalign playerClass">
-                             <img class="" src="../../../assets/svgball.png" alt="">
-                             <span class="player2Score">Shivam Dube : 56(43)*</span> </span>
-                     </div>
-                 </div>
-             </div>
-         </div>
-          <!-- slide 4 -->
-         <div class="Mainclasschart" [class.active]="currentIndex === 4">
-             <canvasjs-chart [options]="chartOptions2" [styles]="{width: '100%', height:'170px'}"></canvasjs-chart>  
-         </div>
-          <!-- slide 5 -->
-         <div class="Mainclasschart" [class.active]="currentIndex === 5">
-             <canvasjs-chart [options]="chartOptions" [styles]="{width: '100%', height:'170px'}"></canvasjs-chart>  
-         </div>
-       </div>
+        <!-- Slide 1 -->
+        <div class="Mainclass" [class.active]="currentIndex === 1">
+            <div class="firstBlock">
+                <span class="Cardheading">1st T20I | India tour of Ireland, 2023 </span>
+                <div class="Flagdiv">
+                    <div class="country">
+                        <img class="FlagImg" src="../../../assets/flag2.png" alt="">
+                        <div class="Score">
+                            <span class="CountryName">IRE</span>
+                            <span class="runs">142-5<span class="over">18.2</span></span>
+                        </div>
+                    </div>
+                    <div class="showDesktop borderClass">
+                        <div class="borders"></div>
+                        <span class="vs">vs</span>
+                        <div class="borders"></div>
+                    </div>
+                    <div class="country">
+                        <img class="FlagImg" src="../../../assets/indiaFlag.png" alt="">
+                        <div class="Score">
+                            <span class="CountryName">IND</span>
+                            <!-- <span class="runs"> 142-5<span class="over">18.2</span> -->
+                            <span class="Target"> 200,<span class="over">yet to bet</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <span class="TossStatus">Ind won the toss and choose to bat</span>
+            </div>
+            <div #ballsDiv class="" style="position: relative;">
+                <div class="OverDiv Scrollhidden " (scroll)="onScroll($event)" #scrollContainer>
+                    <div class="LeftClick showInMobile" *ngIf="canScrollLeft()" (click)="scrollLeft()">
+                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path id="Vector"
+                                d="M6.41767 12C6.22113 11.9331 6.08087 11.7917 5.93848 11.6479C4.23164 9.92434 2.52298 8.20295 0.81402 6.48156C0.67224 6.33863 0.597395 6.16317 0.605305 5.96779C0.612911 5.7816 0.702969 5.62179 0.836838 5.48713C2.48556 3.82679 4.13307 2.16521 5.78179 0.504562C5.91505 0.370212 6.0474 0.232796 6.19435 0.114397C6.42315 -0.0699496 6.82384 -0.021179 7.01978 0.186786C7.1427 0.317148 7.26683 0.446896 7.39857 0.567749C7.68578 0.830926 7.66144 1.25913 7.39674 1.52598C6.2336 2.6974 5.07137 3.86973 3.90853 5.04145C3.59607 5.35616 3.283 5.67025 2.96414 5.99048C2.99061 6.01932 3.01252 6.04478 3.03625 6.06839C4.47839 7.52231 5.92022 8.97684 7.36358 10.4295C7.50049 10.5672 7.59177 10.7292 7.60089 10.9209C7.60911 11.0902 7.55678 11.2537 7.4366 11.381C7.29239 11.5338 7.14939 11.6896 6.99027 11.8261C6.90051 11.9031 6.78003 11.9433 6.67324 12H6.41737H6.41767Z"
+                                fill="black" fill-opacity="0.4" />
+                        </svg>
+                    </div>
+                    <div class="BallsStatus">
+                        <span class="OverCount">Over:17</span>
+                        <span class="Gol balls">1</span>
+                        <span class="wicket balls">W</span>
+                        <span class="Gol balls">3</span>
+                        <span class="Gol balls">4</span>
+                        <span class="Gol balls">5</span>
+                        <span class="wicket balls">W</span>
+                    </div>
+                    <div class="BallsStatus">
+                        <span class="OverCount">Over:17</span>
+                        <span class="Gol balls">1</span>
+                        <span class="wicket balls">W</span>
+                        <span class="Gol balls">3</span>
+                        <span class="wicket balls">W</span>
+                        <span class="Gol balls">5</span>
+                        <span class="wicket balls">W</span>
+                    </div>
+                    <div class="BallsStatus">
+                        <span class="OverCount">Over:17</span>
+                        <span class="Gol balls">1</span>
+                        <span class="wicket balls">W</span>
+                        <span class="Gol balls">3</span>
+                        <span class="Gol balls">4</span>
+                        <span class="Gol balls">5</span>
+                        <span class="wicket balls">W</span>
+                    </div>
+                    <div class="BallsStatus">
+                        <span class="OverCount">Over:17</span>
+                        <span class="Gol balls">1</span>
+                        <span class="wicket balls">W</span>
+                        <span class="Gol balls">3</span>
+                        <span class="Gol balls">4</span>
+                        <span class="Gol balls">5</span>
+                        <span class="wicket balls">W</span>
+                    </div>
+                    <div class="RightClick showInMobile" *ngIf="canScrollRight()" (click)="scrollRight()">
+                        <svg style="transform: rotate(-180deg);" width="8" height="12" viewBox="0 0 8 12" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path id="Vector"
+                                d="M6.41767 12C6.22113 11.9331 6.08087 11.7917 5.93848 11.6479C4.23164 9.92434 2.52298 8.20295 0.81402 6.48156C0.67224 6.33863 0.597395 6.16317 0.605305 5.96779C0.612911 5.7816 0.702969 5.62179 0.836838 5.48713C2.48556 3.82679 4.13307 2.16521 5.78179 0.504562C5.91505 0.370212 6.0474 0.232796 6.19435 0.114397C6.42315 -0.0699496 6.82384 -0.021179 7.01978 0.186786C7.1427 0.317148 7.26683 0.446896 7.39857 0.567749C7.68578 0.830926 7.66144 1.25913 7.39674 1.52598C6.2336 2.6974 5.07137 3.86973 3.90853 5.04145C3.59607 5.35616 3.283 5.67025 2.96414 5.99048C2.99061 6.01932 3.01252 6.04478 3.03625 6.06839C4.47839 7.52231 5.92022 8.97684 7.36358 10.4295C7.50049 10.5672 7.59177 10.7292 7.60089 10.9209C7.60911 11.0902 7.55678 11.2537 7.4366 11.381C7.29239 11.5338 7.14939 11.6896 6.99027 11.8261C6.90051 11.9031 6.78003 11.9433 6.67324 12H6.41737H6.41767Z"
+                                fill="black" fill-opacity="0.4" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="secondBlock">
+                <div class="ScoreDiv">
+                    <div class="PlayerName">
+                        <span class="Svgalign">
+                            <img class="" src="../../../assets/svgbat.png" alt="">
+                            <span class="player1Score">Shivam Dube : 56(43)*</span>
+                        </span>
+                        <span class="Svgalign">
+                            <img class="" src="../../../assets/svgbat.png" alt="">
+                            <span class="player1Score">Shivam Dube : 56(43)*</span>
+                        </span>
+                    </div>
+                    <div class="PlayerName">
+                        <span class="Svgalign">
+                            <img class="" src="../../../assets/svgball.png" alt="">
+                            <span class="player2Score">Shivam Dube : 56(43)*</span> </span>
+                        <span class="Svgalign">
+                            <img class="" src="../../../assets/svgball.png" alt="">
+                            <span class="player2Score">Shivam Dube : 56(43)*</span> </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slide 2 -->
+        <div class="Mainclass" [class.active]="currentIndex === 2">
+            <div class="ImgSpan">
+                <span class="Cardheading teamName">India </span>
+                <img class="teamImg" src="../../../assets/indiaFlag.png" alt="">
+            </div>
+            <div class="secondBlock">
+                <div class="ScoreDiv">
+                    <div class="PlayerName">
+                        <span class="Svgalign playerClass">
+                            <img class="" src="../../../assets/svgbat.png" alt="">
+                            <span class="player1Score">Shivam Dube : 56(43)*</span>
+                        </span>
+                        <span class="Svgalign playerClass">
+                            <img class="" src="../../../assets/svgbat.png" alt="">
+                            <span class="player1Score">Shivam Dube : 56(43)*</span>
+                        </span>
+                        <span class="Svgalign playerClass">
+                            <img class="" src="../../../assets/svgbat.png" alt="">
+                            <span class="player1Score">Shivam Dube : 56(43)*</span>
+                        </span>
+                        <span class="Svgalign playerClass">
+                            <img class="" src="../../../assets/svgbat.png" alt="">
+                            <span class="player1Score">Shivam Dube : 56(43)*</span>
+                        </span>
+                        <span class="Svgalign playerClass">
+                            <img class="" src="../../../assets/svgbat.png" alt="">
+                            <span class="player1Score">Shivam Dube : 56(43)*</span>
+                        </span>
+                        <span class="Svgalign playerClass">
+                            <img class="" src="../../../assets/svgbat.png" alt="">
+                            <span class="player1Score">Shivam Dube : 56(43)*</span>
+                        </span>
+                    </div>
+                    <div class="PlayerName">
+                        <span class="Svgalign playerClass">
+                            <img class="" src="../../../assets/svgball.png" alt="">
+                            <span class="player2Score">Shivam Dube : 56(43)*</span> </span>
+                        <span class="Svgalign playerClass">
+                            <img class="" src="../../../assets/svgball.png" alt="">
+                            <span class="player2Score">Shivam Dube : 56(43)*</span> </span>
+                        <span class="Svgalign playerClass">
+                            <img class="" src="../../../assets/svgball.png" alt="">
+                            <span class="player2Score">Shivam Dube : 56(43)*</span> </span>
+                        <span class="Svgalign playerClass">
+                            <img class="" src="../../../assets/svgball.png" alt="">
+                            <span class="player2Score">Shivam Dube : 56(43)*</span> </span>
+                        <span class="Svgalign playerClass">
+                            <img class="" src="../../../assets/svgball.png" alt="">
+                            <span class="player2Score">Shivam Dube : 56(43)*</span> </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slide 3 -->
+        <div class="Mainclass" [class.active]="currentIndex === 3">
+            <div class="ImgSpan">
+                <span class="Cardheading teamName">Ireland </span>
+                <img class="teamImg" src="../../../assets/flag2.png" alt="">
+            </div>
+            <div class="secondBlock">
+                <div class="ScoreDiv">
+                    <div class="PlayerName">
+                        <span class="Svgalign playerClass">
+                            <img class="" src="../../../assets/svgbat.png" alt="">
+                            <span class="player1Score">Shivam Dube : 56(43)*</span>
+                        </span>
+                        <span class="Svgalign playerClass">
+                            <img class="" src="../../../assets/svgbat.png" alt="">
+                            <span class="player1Score">Shivam Dube : 56(43)*</span>
+                        </span>
+                        <span class="Svgalign playerClass">
+                            <img class="" src="../../../assets/svgbat.png" alt="">
+                            <span class="player1Score">Shivam Dube : 56(43)*</span>
+                        </span>
+                        <span class="Svgalign playerClass">
+                            <img class="" src="../../../assets/svgbat.png" alt="">
+                            <span class="player1Score">Shivam Dube : 56(43)*</span>
+                        </span>
+                        <span class="Svgalign playerClass">
+                            <img class="" src="../../../assets/svgbat.png" alt="">
+                            <span class="player1Score">Shivam Dube : 56(43)*</span>
+                        </span>
+                        <span class="Svgalign playerClass">
+                            <img class="" src="../../../assets/svgbat.png" alt="">
+                            <span class="player1Score">Shivam Dube : 56(43)*</span>
+                        </span>
+                    </div>
+                    <div class="PlayerName">
+                        <span class="Svgalign playerClass">
+                            <img class="" src="../../../assets/svgball.png" alt="">
+                            <span class="player2Score">Shivam Dube : 56(43)*</span> </span>
+                        <span class="Svgalign playerClass">
+                            <img class="" src="../../../assets/svgball.png" alt="">
+                            <span class="player2Score">Shivam Dube : 56(43)*</span> </span>
+                        <span class="Svgalign playerClass">
+                            <img class="" src="../../../assets/svgball.png" alt="">
+                            <span class="player2Score">Shivam Dube : 56(43)*</span> </span>
+                        <span class="Svgalign playerClass">
+                            <img class="" src="../../../assets/svgball.png" alt="">
+                            <span class="player2Score">Shivam Dube : 56(43)*</span> </span>
+                        <span class="Svgalign playerClass">
+                            <img class="" src="../../../assets/svgball.png" alt="">
+                            <span class="player2Score">Shivam Dube : 56(43)*</span> </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slide 4 -->
+        <div class="Mainclasschart" [class.active]="currentIndex === 4">
+            <canvasjs-chart [options]="chartOptions2" [styles]="{width: '100%', height:'170px'}"></canvasjs-chart>
+        </div>
+        <!-- slide 5 -->
+        <div class="Mainclasschart" [class.active]="currentIndex === 5">
+            <canvasjs-chart [options]="chartOptions" [styles]="{width: '100%', height:'170px'}"></canvasjs-chart>
+        </div>
+    </div>
 </div>
-  <!-- </div> -->
+<!-- </div> -->
 
 
 
 
-    <!-- <div class="Mainclasschart">
+<!-- <div class="Mainclasschart">
         <figure class="highcharts-figure">
             <div id="containerBall"></div>
           </figure>

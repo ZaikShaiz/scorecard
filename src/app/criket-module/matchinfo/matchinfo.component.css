@@ -185,7 +185,9 @@ a {
 .OverCount {
     padding-right: 7.2px;
 }
-
+.ballsDiv {
+    touch-action: none;
+  }
 .runs {
     color: #000;
     font-family: var(--main-font-family);

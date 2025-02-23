@@ -6,8 +6,10 @@ import { ChangeDetectorRef, Component, ElementRef, HostListener, OnInit, ViewChi
   styleUrls: ['./matchinfo.component.css']
 })
 export class MatchinfoComponent implements OnInit{
+  @ViewChild('ballsDiv') ballsDiv!: ElementRef;
   chart: any;
   chart2: any;
+  isSwipingEnabled = true;
 
 
   constructor(){}
@@ -137,44 +139,52 @@ chartOptions2 = {
   }
 ///////
 currentIndex = 0; // Tracks the current slide index
-  offset = 0; // Tracks the transform offset
-  startX = 0; // Tracks the starting X position of the touch
+offset = 0; // Tracks the transform offset
+startX = 0;
+onTouchStart(event: TouchEvent) {
+  this.startX = event.touches[0].clientX;
 
-  // Handle touch start event
-  onTouchStart(event: TouchEvent) {
-    this.startX = event.touches[0].clientX;
+  // Check if the touch started inside the PlayerName div
+  const touchTarget = event.target as HTMLElement;
+  if (this.ballsDiv.nativeElement.contains(touchTarget)) {
+    this.isSwipingEnabled = false; // Disable swiping
+  } else {
+    this.isSwipingEnabled = true; // Enable swiping
   }
+}
 
-  // Handle touch end event
-  onTouchEnd(event: TouchEvent) {
-    const endX = event.changedTouches[0].clientX;
-    const deltaX = this.startX - endX;
+// Handle touch end event
+onTouchEnd(event: TouchEvent) {
+  if (!this.isSwipingEnabled) return; // Skip swipe logic if swiping is disabled
 
-    if (deltaX > 50) {
-      this.nextSlide(); // Swipe left to go to the next slide
-    } else if (deltaX < -50) {
-      this.prevSlide(); // Swipe right to go to the previous slide
-    }
+  const endX = event.changedTouches[0].clientX;
+  const deltaX = this.startX - endX;
+
+  if (deltaX > 50) {
+    this.nextSlide(); // Swipe left to go to the next slide
+  } else if (deltaX < -50) {
+    this.prevSlide(); // Swipe right to go to the previous slide
   }
+}
 
-  // Move to the next slide
-  nextSlide() {
-    if (this.currentIndex < 4) { // Adjust based on the number of slides
-      this.currentIndex++;
-      this.updateOffset();
-    }
+// Move to the next slide
+nextSlide() {
+  if (this.currentIndex < 4) { // Adjust based on the number of slides
+    this.currentIndex++;
+    this.updateOffset();
   }
+}
 
-  // Move to the previous slide
-  prevSlide() {
-    if (this.currentIndex > 0) {
-      this.currentIndex--;
-      this.updateOffset();
-    }
+// Move to the previous slide
+prevSlide() {
+  if (this.currentIndex > 0) {
+    this.currentIndex--;
+    this.updateOffset();
   }
+}
 
-  // Update the transform offset
-  updateOffset() {
-    this.offset = -this.currentIndex * 100;
-  }
+// Update the transform offset
+updateOffset() {
+  this.offset = -this.currentIndex * 100;
+}
 }
