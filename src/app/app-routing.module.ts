@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
 
 const routes: Routes = [
-  { path: '', component: LayoutComponent },
+  { path: 'socrecard', component: LayoutComponent },
 
 
 ];
