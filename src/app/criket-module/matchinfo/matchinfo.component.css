@@ -1,0 +1,512 @@
+.Scrollhidden::-webkit-scrollbar {
+    display: none;
+}
+
+.slides {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+.canvasjs-chart-credit > a
+{
+    font-size: 0 !important;
+}
+a:-webkit-any-link{
+    font-size: 0 !important;
+}
+a {
+    
+    font-size: 0 !important;
+}
+.slides>div {
+    /* display: flex; */
+    flex-shrink: 0;
+    width: 100%;
+    /* height: 300px; */
+    scroll-snap-align: start;
+    scroll-behavior: smooth;
+
+}
+
+.Scrollhidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.Mainclass {
+    /* display: flex; */
+    /* width: 100%; */
+    background-color: rgb(255 255 255);
+    height: 100%;
+    /* flex-direction: column; */
+    /* padding: 25px; */
+    /* align-items: center; */
+}
+.Mainclasschart {
+
+    background-color: rgb(255 255 255);
+    height:170px;
+}
+
+.ImgSpan {
+    padding: 8.5px 25px 6px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.teamImg {
+    /* width: 60.279px; */
+    height: 22px;
+    flex-shrink: 0;
+}
+
+.teamName {
+    padding: 0px 15px 0 0;
+}
+
+.firstBlock {
+    padding: 13.6px 25px 0px 25px;
+}
+
+.playerClass {
+    padding-top: 2px;
+}
+
+.secondBlock {
+    display: flex;
+    padding: 6.8px 0px 1px 0px;
+    justify-content: space-between;
+}
+
+.Heading {
+    display: flex;
+}
+
+.Cardheading {
+    color: #000;
+    font-family: var(--main-font-family);
+    font-size: 13.395px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    /* padding: 15px 0px 0px 28px; */
+    display: flex;
+    justify-content: center;
+}
+
+.Flagdiv {
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+    padding: 9px 0px 2.7px 0;
+}
+
+.FlagImg {
+    width: 60.279px;
+    height: 41.525px;
+    flex-shrink: 0;
+}
+
+.country {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.Score {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5.6px;
+}
+
+.Gol {
+    background: #00C72C;
+    font-size: 10.716px;
+}
+
+.balls {
+    display: flex;
+    flex-direction: row;
+    width: 17px;
+    height: 17px;
+    border: 0.5px solid black;
+    border-radius: 18px;
+    color: white;
+    margin-right: 3.2px;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+}
+
+.wicket {
+    background: #DA0000;
+    font-size: 10.716px;
+}
+
+.BallsStatus {
+    display: flex;
+    align-items: center;
+    padding-left: 23px;
+    font-size: 12.056px;
+    font-style: normal;
+    font-weight: 600;
+
+}
+
+.over {
+    color: #000;
+    /* font-family: Inter; */
+    font-size: 13px;
+    /* font-style: normal; */
+    font-weight: 600;
+    /* line-height: normal; */
+}
+
+.OverCount {
+    padding-right: 7.2px;
+}
+
+.runs {
+    color: #000;
+    font-family: var(--main-font-family);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.Target {
+    color: #6F6F6F;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.TossStatus {
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    padding-bottom: 3px;
+    color: #000;
+}
+
+.CountryName {
+    font-size: 18px;
+    line-height: 1;
+    padding-bottom: 4px;
+    font-weight: 500;
+}
+
+.LeftClick {
+    padding: 0px 2px 0px 3px;
+    position: absolute;
+    background: #DEDEDE;
+    /* top: -1.5px; */
+    display: flex;
+    height: 23px;
+    align-items: center;
+}
+
+.RightClick {
+    padding: 0px 2px 0px 3px;
+    position: absolute;
+    background: #DEDEDE;
+    right: 0;
+    /* top: -1.5px; */
+    display: flex;
+    height: 23px;
+    align-items: center;
+}
+
+.OverDiv {
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+    background: #DEDEDE;
+    /* width: 475.531px; */
+    width: 100%;
+    height: 26px;
+    flex-shrink: 0;
+    white-space: nowrap;
+    overflow: auto;
+    /* position: relative; */
+}
+
+.ScoreDiv {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.PlayerName {
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    font-family: var(--main-font-family);
+    font-size: 13.395px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+@media screen and (max-width: 477px) {
+    .PlayerName {
+        font-size: 10.395px;
+        font-weight: 400;
+    }
+
+    .runs {
+        font-size: 12.395px;
+    }
+
+    .over {
+        font-size: 8.395px;
+        font-weight: 600;
+    }
+
+    .FlagImg {
+        width: 55.279px;
+        height: 34.525px;
+        flex-shrink: 0;
+    }
+
+    .Target {
+        font-size: 12.395px;
+    }
+}
+
+@media screen and (max-width: 336px) {
+    .PlayerName {
+        font-size: 7.395px;
+        font-weight: 400;
+    }
+
+    .runs {
+        font-size: 9.395px;
+    }
+
+    .Target {
+        font-size: 9.395px;
+    }
+
+    .over {
+        font-size: 7.395px;
+        font-weight: 600;
+    }
+
+    .Cardheading {
+        font-size: 12.395px;
+    }
+
+    .CountryName {
+        font-size: 14px;
+    }
+
+    .FlagImg {
+        width: 45.279px;
+        height: 28.525px;
+        flex-shrink: 0;
+    }
+}
+
+.Svgalign {
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+
+
+
+}
+
+.player1Score {
+    padding-left: 4px;
+}
+
+.player2Score {
+    padding-left: 8px;
+}
+
+.borderClass {
+    display: flex;
+    align-items: center;
+}
+
+.borders {
+    border-top: 2px solid gray;
+    width: 40px;
+    margin: 20px 16px 15px 20px;
+}
+
+.vs {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.highcharts-figure,
+.highcharts-data-table table {
+    min-width: 310px;
+    max-width: 800px;
+    /* margin: 1em auto; */
+}
+
+#container {
+    height: 170px;
+}
+#containerBall{
+    height: 170px;
+}
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+
+
+/* for mobile view */
+
+@media only screen and (max-width:992px) {
+    .showDesktop {
+        display: none !important;
+    }
+}
+
+/* for desktop view */
+
+@media only screen and (min-width:992px) {
+    .showInMobile {
+        display: none !important;
+    }
+
+    .OverDiv {
+        border-top: 1px solid gray;
+        border-bottom: 1px solid gray;
+        height: 50px;
+    }
+
+    .Svgalign {
+        padding: 5px 12px 5px 12px;
+        border: 1px solid gray;
+        border-radius: 18px;
+        margin: 3px;
+
+    }
+
+    .balls {
+        width: 26px;
+        height: 26px;
+    }
+
+    .FlagImg {
+        width: 100.279px;
+        height: 67.525px;
+
+    }
+
+    .runs {
+        font-size: 24px;
+    }
+
+    .CountryName {
+        font-size: 30px;
+    }
+
+    .Target {
+        font-size: 24px;
+    }
+
+    .over {
+        font-size: 16px;
+    }
+
+    .Cardheading {
+        font-size: 18.395px;
+    }
+
+    .TossStatus {
+        font-size: 18px;
+    }
+
+    .BallsStatus {
+        border-right: 1px solid gray;
+        height: 31px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .Flagdiv {
+        display: flex;
+        align-items: center;
+        padding: 18px 0px 11.7px 0;
+        justify-content: space-around;
+    }
+
+    .country {
+        display: flex;
+        width: auto;
+    }
+
+    .BallsStatus {
+        font-size: 16.056px;
+        height: 48px;
+    }
+
+    .player1Score {
+        font-size: 18px;
+    }
+
+    .player2Score {
+        font-size: 18px;
+    }
+
+    .CarosalClass {
+        top: 144px;
+    }
+
+}
+
+@media only screen and (max-width:280px) {
+    .Flagdiv {
+        padding: 8px 0px 4px 0;
+    }
+
+    .secondBlock {
+        padding: 5px 0px 4px 0px;
+    }
+
+    .firstBlock {
+        padding: 6px 8px 0px 20px;
+    }
+
+}
