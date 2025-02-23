@@ -135,5 +135,46 @@ chartOptions2 = {
     this.canScrollLeft();
     this.canScrollRight();
   }
+///////
+currentIndex = 0; // Tracks the current slide index
+  offset = 0; // Tracks the transform offset
+  startX = 0; // Tracks the starting X position of the touch
 
+  // Handle touch start event
+  onTouchStart(event: TouchEvent) {
+    this.startX = event.touches[0].clientX;
+  }
+
+  // Handle touch end event
+  onTouchEnd(event: TouchEvent) {
+    const endX = event.changedTouches[0].clientX;
+    const deltaX = this.startX - endX;
+
+    if (deltaX > 50) {
+      this.nextSlide(); // Swipe left to go to the next slide
+    } else if (deltaX < -50) {
+      this.prevSlide(); // Swipe right to go to the previous slide
+    }
+  }
+
+  // Move to the next slide
+  nextSlide() {
+    if (this.currentIndex < 4) { // Adjust based on the number of slides
+      this.currentIndex++;
+      this.updateOffset();
+    }
+  }
+
+  // Move to the previous slide
+  prevSlide() {
+    if (this.currentIndex > 0) {
+      this.currentIndex--;
+      this.updateOffset();
+    }
+  }
+
+  // Update the transform offset
+  updateOffset() {
+    this.offset = -this.currentIndex * 100;
+  }
 }

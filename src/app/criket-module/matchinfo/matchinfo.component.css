@@ -1,3 +1,21 @@
+.slides-container {
+    width: 100%;
+    overflow: hidden;
+    /* position: relative; */
+  }
+  
+  .slides-inner {
+    display: flex;
+    transition: transform 0.3s ease;
+  }
+  
+  .Mainclass,
+  .Mainclasschart {
+    flex: 0 0 100%; /* Each slide takes full width */
+    box-sizing: border-box;
+  }
+
+
 .Scrollhidden::-webkit-scrollbar {
     display: none;
 }
@@ -35,7 +53,7 @@ a {
 
 .Mainclass {
     /* display: flex; */
-    /* width: 100%; */
+    width: 100%;
     background-color: rgb(255 255 255);
     height: 100%;
     /* flex-direction: column; */
