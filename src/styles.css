@@ -14,6 +14,10 @@
     font-weight: normal;
     font-style: normal;
   } */
+   
+  html, body {
+    touch-action: manipulation; /* Disables double-tap to zoom */
+  }
 
   body {
     font-family: sans-serif !important;
