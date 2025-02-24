@@ -1,39 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
 /* @import "../node_modules/bootstrap/dist/css/bootstrap.min.css"; */
 @font-face {
-    font-family: 'Inter', sans-serif;
-    src: url('../src/assets/fonts/Inter/static/Inter-Regular.ttf');
-  
-    font-weight: normal;
-    font-style: normal;
-  }
-  /* @font-face {
+  font-family: 'Inter', sans-serif;
+  src: url('../src/assets/fonts/Inter/static/Inter-Regular.ttf');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* @font-face {
     font-family: 'helvetica_neueregular, Helvetica Neue"';
     src: url('src/assets/fonts/Helvetica/helvetica.ttf');
   
     font-weight: normal;
     font-style: normal;
   } */
-  * {
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-  }
-  html, body {
-    touch-action: manipulation; /* Disables double-tap to zoom */
-  }
 
-  body {
-    font-family: sans-serif !important;
-    background: black !important;
-    /* -webkit-font-smoothing: antialiased; */
-  } 
+html,
+body {
+  touch-action: manipulation;
+  /* Disables double-tap to zoom */
 
-  :root {
-    --main-font-family : 'sans-serif' !important;
-  }
-  a {
-    
-    font-size: 0 !important;
+}
+
+body {
+  font-family: sans-serif !important;
+  background: black !important;
+  /* -webkit-font-smoothing: antialiased; */
+  /* overflow-x: hidden !important; */
+  touch-action: pan-x pan-y !important;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+}
+
+:root {
+  --main-font-family: 'sans-serif' !important;
+}
+
+a {
+
+  font-size: 0 !important;
 }
